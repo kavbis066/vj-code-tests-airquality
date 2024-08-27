@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>airQuality</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+        <script>
+            // default content showing in english
+            function load() {
+                var translate = new Translate();
+                var currentLang = 'en';
+                var attributeName = 'data-tag';
+                translate.init(attributeName, currentLang);
+                translate.process();
+                translate.populate();
+            }
+            
+        </script>
+    </head>
+    <body>
+        <!-- Hero container -->
+        <div class="hero-section">
+             <img class="hero-image" data-tag="hero_1_image" src="" alt="Hero image">
+             <h1 data-tag="hero_1_title"></h1>
+        </div>
+
+        <!-- Language toggle button -->
+        <button class="lang-toggle">Toggle Language</button>
+
+        <!-- ariticle info -->
+        <div class="article-info">
+            <p data-tag="article-info_1_byline"></p>
+            <p data-tag="article-info_1_date"></p>
+            <a data-tag="article-info_1_category"></a>
+            <!-- <p data-tag="article-info_1_category_url"></p> -->
+        </div>
+        
+        <!-- Article content section -->
+        <p data-tag="p_1_value"></p>
+        <p data-tag="p_2_value"></p>
+        <p data-tag="p_3_value"></p>
+        <p data-tag="p_4_value"></p>
+        <p data-tag="p_5_value"></p>
+        
+        <!-- City info section -->
+        <div class="compare-tabs">
+            <h2 data-tag="compare-tabs-1-title"></h2>
+            <select class="city-select">
+                <option value="" disabled selected>Select a city</option>
+            </select>
+            <p class="aqi-value"></p>
+            <div class="cigarette-container"></div>
+        </div>
+
+        <!-- Article content section -->
+        <p data-tag="p_6_value"></p>
+        <p data-tag="p_7_value"></p>
+        <p data-tag="p_8_value"></p>
+        <p data-tag="p_9_value"></p>
+        <p data-tag="p_10_value"></p>
+    </body>
+</html>
